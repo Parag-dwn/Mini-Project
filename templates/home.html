@@ -1,4 +1,11 @@
-<body>
+
+
+
+  {% extends 'base.html' %}  
+
+
+
+  {% block base %}
     <div id="login-form-container">
         <form action="/result" method="POST">
             
@@ -140,7 +147,7 @@
             <br>
             <label for="q19">23.Panic attacks</label>
             <select id="q19" name="q19">
-              <<option value='1'>Yes</option>
+              <option value='1'>Yes</option>
               <option value='0'>No</option>
             </select>
             <br>
@@ -173,4 +180,5 @@
             
             <input type="submit" value="Submit">
           </form>
-</body>
+
+          {% endblock base %}
