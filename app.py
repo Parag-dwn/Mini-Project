@@ -2,10 +2,19 @@ import pickle
 from flask import Flask, render_template, request
 import numpy as np
 import pandas as pd
-app=Flask(__name__)
-
+app = Flask(__name__, template_folder='templates', static_folder='static')
 @app.route('/')
 def home():
+    return render_template('index.html')
+
+@app.route('/base')
+def base():
+    return render_template('base.html')
+@app.route('/about')
+def about():
+    return render_template('about.html')   
+@app.route('/service')
+def service():
     context=['I am currently employed at least part-time', 'Education',
        'I have my own computer separate from a smart phone',
        'I have been hospitalized before for my mental illness',
@@ -20,10 +29,8 @@ def home():
        'Lack of concentration', 'Anxiety', 'Depression', 'Obsessive thinking',
        'Mood swings', 'Panic attacks', 'Compulsive behavior', 'Tiredness',
        'Age', 'Gender']
-    
     return render_template('home.html',context=context)
-        
-
+    
 def ValuePredictor(to_predict_list):
     to_predict = (to_predict_list)
     loaded_model = pickle.load(open("model.pkl", "rb"))
@@ -33,7 +40,7 @@ def ValuePredictor(to_predict_list):
 @app.route('/result', methods = ['POST'])
 
 def result():
-    if request.method == 'POST':
+    if request.method =='POST':
         
         to_predict_list = request.form.to_dict()
         to_predict_list = list(to_predict_list.values())
