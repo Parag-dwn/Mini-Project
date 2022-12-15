@@ -31,6 +31,10 @@ def service():
        'Age', 'Gender']
     return render_template('home.html',context=context)
     
+@app.route('/team')
+def team():
+    return render_template('team.html')
+    
 def ValuePredictor(to_predict_list):
     to_predict = (to_predict_list)
     loaded_model = pickle.load(open("model.pkl", "rb"))
@@ -50,9 +54,9 @@ def result():
 
         result = ValuePredictor([to_predict_list])       
         if int(result)== 1:
-            prediction ='Prediction show your  metaly Ill'
+            prediction ='Prediction shows that you are  mentaly Ill'
         else:
-            prediction ='Prediction show your are fine'           
+            prediction ='Prediction shows that your are fine'           
         return render_template("result.html", prediction = prediction)
     else:
         return render_template("home.html")
