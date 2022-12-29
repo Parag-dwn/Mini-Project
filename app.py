@@ -2,8 +2,53 @@ import pickle
 from flask import Flask, render_template, request
 import numpy as np
 import pandas as pd
+from flask_sqlalchemy import SQLAlchemy
+import os
+from sqlalchemy.sql import func
 app = Flask(__name__, template_folder='templates', static_folder='static')
+
+basedir = os.path.abspath(os.path.dirname(__file__))
+app.config['SQLALCHEMY_DATABASE_URI'] =\
+        'sqlite:///' + os.path.join(basedir, 'database.db')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
+class student(db.Model):
+    id = db.Column(db.Integer, db.Sequence('seq_reg_id', start=1, increment=1),
+               primary_key=True)
+    q1=db.Column(db.Integer)
+    q2=db.Column(db.Integer)
+    q3=db.Column(db.Integer)
+    q4=db.Column(db.Integer)
+    q5=db.Column(db.Integer)
+    q6=db.Column(db.Integer)
+    q7=db.Column(db.Integer)
+    q8=db.Column(db.Integer)
+    q9=db.Column(db.Integer)
+    q10=db.Column(db.Integer)
+    q11=db.Column(db.Integer)
+    q12=db.Column(db.Integer)
+    q13=db.Column(db.Integer)
+    q14=db.Column(db.Integer)
+    q15=db.Column(db.Integer)
+    q16=db.Column(db.Integer)
+    q17=db.Column(db.Integer)
+    q18=db.Column(db.Integer)
+    q19=db.Column(db.Integer)
+    q20=db.Column(db.Integer)
+    q21=db.Column(db.Integer)
+    q22=db.Column(db.Integer)
+    q23=db.Column(db.Integer)
+    q24=db.Column(db.Integer)
+    q25=db.Column(db.Integer)
+    q26=db.Column(db.Integer)
+    q27=db.Column(db.Integer)
+    prediction=db.Column(db.Integer)
+
+#col_list=student.__table__.columns.keys()
+
+
 @app.route('/')
+
 def home():
     return render_template('index.html')
 
@@ -47,12 +92,22 @@ def result():
     if request.method =='POST':
         
         to_predict_list = request.form.to_dict()
+        
         to_predict_list = list(to_predict_list.values())
         to_predict_list = list(map(int, to_predict_list))
         to_predict_list = list(map(int, to_predict_list))
-        print(to_predict_list)
+        #print(to_predict_list)
+        r=to_predict_list
+        for i in range(len(r)):
+            r[i]=int(r[i])
+        
 
-        result = ValuePredictor([to_predict_list])       
+
+        result = ValuePredictor([to_predict_list]) 
+        data_lst=student(q1=r[0],q2=r[1],q3=r[2],q4=r[3],q5=r[4],q6=r[5],q7=r[6],q8=r[7],q9=r[8],q10=r[9],q11=r[10],q12=r[11],q13=r[12],q14=r[13],q15=r[14],q16=r[15],q17=r[16],q18=r[17],q19=r[18],q20=r[19],q21=r[20],q22=r[21],q23=r[22],q24=r[23],q25=r[24],q26=r[25],q27=r[26],prediction=result) 
+        print(data_lst) 
+        db.session.add(data_lst)    
+        db.session.commit()
         if int(result)== 1:
             prediction ='Prediction shows that you are  mentaly Ill'
         else:
