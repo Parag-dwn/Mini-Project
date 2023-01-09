@@ -115,6 +115,14 @@ def result():
         return render_template("result.html", prediction = prediction)
     else:
         return render_template("home.html")
+@app.route('/Contact')
+def Contact():
+    return render_template('Contact.html')
+
+@app.route('/Read_more')
+def Read_more():
+    return render_template('Read_more.html')
+
         
 if __name__ == '__main__':
     app.run(debug=True)
