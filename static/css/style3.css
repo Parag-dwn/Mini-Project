@@ -1,0 +1,466 @@
+html {
+    height: 100%;
+  }
+  body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: #91c1d1;
+    background: -moz-linear-gradient(top, #91c1d1 0%, #91d1c1 99%);
+    background: -webkit-linear-gradient(top, #91c1d1 0%, #91d1c1 99%);
+    background: linear-gradient(to bottom, #91c1d1 0%, #91d1c1 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient(
+        startColorstr="#91c1d1",
+        endColorstr="#91d1c1",
+        GradientType=0
+      );
+    text-align: center;
+    color: #fff;
+  }
+  h1 {
+      font-family: 'Karla', "Comic Sans MS", "Comic Sans", sans-serif;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 3em;
+      padding-block: 46px;
+  }
+  #quiz {
+      font-family: 'Karla', "Comic Sans MS", "Comic Sans", sans-serif;
+      width: 800px;
+      margin: auto;
+  }
+  #questions {
+      font-size: 2.3em;
+  }
+  #answers {
+      list-style-type: none;
+      margin: 25px 0 0 0;
+      padding: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-align: center;
+      margin-left: 77.5px;
+  }
+  #answers li {
+      float: left;
+      /*margin:0 5px 0 0;*/
+      margin: 0px 15px 15px 0px;
+      width: 200px;
+      height: 50px;
+      position: relative;
+  }
+  #answers label, #answers input {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+  }
+  #answers input[type="radio"] {
+      opacity: 0.011;
+      z-index: 100;
+  }
+  #answers input[type="radio"]:checked + label {
+      opacity: 1;
+  }
+  #answers label {
+      padding: 5px;
+      border: 2px solid #fff;
+      cursor: pointer;
+      z-index: 90;
+      opacity: 0.7;
+      transition: opacity 0.2s linear;
+  }
+  #answers label:hover {
+      opacity: 1;
+  }
+  .button {
+      border: 2px solid #fff;
+      margin: 0.5em;
+      padding: 0.5em;
+      display: inline-block;
+      background-color: transparent;
+      text-transform: uppercase;
+      padding: 10px;
+      color: #fff;
+  }
+  .button:hover {
+      cursor: pointer;
+  }
+  #results {
+      display: none;
+  }
+  #error {
+      display: none;	
+      }
+      
+  /*GEOCITIES WEBPAGE STYLES */	
+  /* Cute styles */
+  .cute {
+      font-family: "Comic Sans MS", "Comic Sans";
+      font-size: 1.4em;
+      text-align: center;
+      color: purple;
+      cursor: url(https://web.archive.org/web/20090830074921/http://www.geocities.com/anneli1970/hkanicursor.gif), auto;
+  }
+  .cute h1 {
+      font-size: 2em;
+      animation: blinker 0.5s linear infinite;
+      font-family: "Comic Sans MS", "Comic Sans";
+  }
+   @keyframes blinker {
+   50% {
+  opacity: 0;
+  }
+  }
+  .cute a {
+      color: yellow;
+      margin: 0 10px 0 20px;
+  }
+  .cute a:hover {
+      background-color: aqua;
+      cursor: url(https://web.archive.org/web/20090830074921/http://www.geocities.com/anneli1970/hkanicursor.gif), auto;
+  }
+  .cute a:before {
+      content: url('https://web.archive.org/web/20091027073252/http://hk.geocities.com/misslailai/flower.gif');
+      margin-right: 10px;
+  }
+  .cute div[id^='img'] {
+      border: solid purple;
+      margin-right: 10px;
+      width: 200px;
+      display: inline-block;
+  }
+  .cute #img1 {
+      content: url('http://dl.glitter-graphics.com/pub/1934/1934264i6w66ik04q.gif');
+  }
+  .cute #img2 {
+      content: url('http://dl.glitter-graphics.com/pub/1824/1824008hb6rav153p.gif');
+  }
+  .cute #img3 {
+      content: url('http://www.commentsyard.com/cy/01/8602_original.gif');
+  }
+  .cute div[id^='affiliate'] {
+      border: solid purple;
+      width: 100px;
+      margin-right: -10px;
+      display: inline-block;
+  }
+  .cute #affiliate1 {
+      content: url('https://web.archive.org/web/20031121213718/http://www.geocities.com/neoasparagus/img/affiliate_neonations.gif');
+  }
+  .cute #affiliate2 {
+      content: url('https://web.archive.org/web/20091027155351/http://www.geocities.com/lucious_kitty150/button1affiliate.gif');
+  }
+  .cute #affiliate3 {
+      content: url('https://web.archive.org/web/20090902111758/http://geocities.com/shaina2kaiba/www/affiliates/affiliate05.gif');
+  }
+  
+  /* Spooky styles */
+      
+  .spooky {
+      font-family: "Special Elite", "Comic Sans MS", "Comic Sans", sans-serif;
+      font-size: 1.4em;
+      text-align: center;
+      color: red;
+  }
+  .spooky h1 {
+      font-size: 2em;
+      animation: blinker 0.5s linear infinite;
+      font-family: "Special Elite", "Comic Sans MS", "Comic Sans", sans-serif;
+  }
+   @keyframes blinker {
+   50% {
+  opacity: 0;
+  }
+  }
+  .spooky a {
+      color: darkgrey;
+      margin: 0 10px 0 20px;
+  }
+  .spooky a:hover {
+      background-color: maroon;
+      cursor: url(https://web.archive.org/web/20091026222418/http://www.geocities.com/evil_empire_uo/demon.gif), auto;
+  }
+  .spooky a:before {
+      content: url('https://web.archive.org/web/20091023163201/http://geocities.com/warhawkuac/doom/doomskullcursor.gif');
+      margin-right: 10px;
+  }
+  .spooky div[id^='img'] {
+      margin-right: 10px;
+      width: 200px;
+      display: inline-block;
+  }
+  .spooky #img1 {
+      content: url('https://web.archive.org/web/20070223045858/http://www.geocities.com/homer3142/scripts/pics/skull.gif');
+  }
+  .spooky #img2 {
+      content: url('https://web.archive.org/web/20090727160436/http://www.geocities.com/dr_tigger/smoking-skull.gif');
+  }
+  .spooky #img3 {
+      content: url('https://web.archive.org/web/20090729141621/http://www.geocities.com/inhell_2000/spookymail.gif');
+  }
+  .spooky div[id^='affiliate'] {
+      width: 100px;
+      margin-right: -10px;
+      display: inline-block;
+      border: red solid;
+  }
+  .spooky #affiliate1 {
+      content: url('https://web.archive.org/web/20091024005344/http://www.geocities.com/TelevisionCity/Lot/9355/MainPics/Banners/Affiliate3.gif');
+  }
+  .spooky #affiliate2 {
+      content: url('https://web.archive.org/web/20091026023913/http://www.geocities.com/sk8ter_213/Metabolic666Affiliate.gif');
+  }
+  .spooky #affiliate3 {
+      content: url('https://web.archive.org/web/20031102202836/http://www.geocities.com:80/prophets_band/affiliate_slipknot.gif');
+  }
+      
+  /* lame styles */
+      
+  .lame {
+      font-family: "Comic Sans MS", "Comic Sans";
+      font-size: 1.4em;
+      text-align: center;
+      color: blue;
+  }
+  .lame h1 {
+      font-size: 2em;
+      animation: blinker 0.5s linear infinite;
+      /* font-family:; */
+  }
+   @keyframes blinker {
+   50% {
+  opacity: 0;
+  }
+  }
+  .lame a {
+      color: darkorange;
+      margin: 0 10px 0 20px;
+  }
+  .lame a:hover {
+      background-color: green;
+      cursor: url(https://web.archive.org/web/20091027003810/http://ca.geocities.com/EverlastingIllusions/Miscellanous/Cursor9.gif), auto;
+  }
+  .lame a:before {
+      content: url('https://web.archive.org/web/20090829195701/http://geocities.com/Athens/Parthenon/5567/dotdance.gif');
+      margin-right: 10px;
+  }
+  .lame div[id^='img'] {
+      margin-right: 10px;
+      width: 200px;
+      display: inline-block;
+  }
+  .lame #img1 {
+      content: url('https://web.archive.org/web/20090902002737/http://www.geocities.com/redsled59/cursor/punkrocker.gif');
+  }
+  .lame #img2 {
+      content: url('https://web.archive.org/web/20091019070930/http://www.geocities.com/barefootguy2003/Sun_in_glasses.gif');
+  }
+  .lame #img3 {
+      content: url('https://web.archive.org/web/20090808214150/http://www.geocities.com/hinm2/ostrich_glasses_geek_lg_clr.gif');
+  }
+  .lame div[id^='affiliate'] {
+      width: 100px;
+      margin-right: -10px;
+      display: inline-block;
+  }
+  .lame #affiliate1 {
+      content: url('https://web.archive.org/web/20091027002720/http://geocities.com/alfatangoindonesia/iemicrosoft.gif');
+  }
+  .lame #affiliate2 {
+      content: url('https://web.archive.org/web/20091020060843/http://geocities.com/FashionAvenue/Runway/5508/images/counter1.gif');
+  }
+  .lame #affiliate3 {
+      content: url('https://web.archive.org/web/20091027051455/http://uk.geocities.com/nomangadit9/email.gif');
+  }
+      
+  /* nerdy styles */
+      
+  .nerdy {
+      font-family: 'Press Start 2P', "Comic Sans MS", "Comic Sans";
+      font-size: 1.4em;
+      text-align: center;
+      color: lime;
+  }
+  .nerdy h1 {
+      font-size: 2em;
+      animation: blinker 0.5s linear infinite;
+      font-family: 'Press Start 2P', "Comic Sans MS", "Comic Sans";
+  }
+   @keyframes blinker {
+   50% {
+  opacity: 0;
+  }
+  }
+  .nerdy h1 {
+      font-size: 2em;
+      animation: blinker 0.5s linear infinite;
+  }
+   @keyframes blinker {
+   50% {
+  opacity: 0;
+  }
+  }
+  .nerdy a {
+      color: gold;
+      margin: 0 10px 0 20px;
+  }
+  .nerdy a:hover {
+      background-color: olive;
+      cursor: url(https://web.archive.org/web/20090820061156/http://geocities.com/Tokyo/Club/8802/pikacursor.gif), auto;
+  }
+  .nerdy a:before {
+      content: url('https://web.archive.org/web/20091027044054/http://www.geocities.com/wisdomflame/videogame/doomf.gif');
+      margin-right: 10px;
+  }
+  .nerdy div[id^='img'] {
+      margin-right: 10px;
+      width: 200px;
+      display: inline-block;
+  }
+  .nerdy #img1 {
+      content: url('https://web.archive.org/web/20040912040324/http://www.geocities.com:80/nerdpleasure/sub-zero.gif');
+  }
+  .nerdy #img2 {
+      content: url('https://web.archive.org/web/20091024223831/http://www.geocities.com/djbirdnerd/Babydude.gif');
+  }
+  .nerdy #img3 {
+      content: url('https://web.archive.org/web/20090831020812/http://geocities.com/arcadevideogamecentral/Z-ryustomp.gif');
+  }
+  .nerdy div[id^='affiliate'] {
+      width: 100px;
+      margin-right: -10px;
+      display: inline-block;
+      border: cyan solid;
+  }
+  .nerdy #affiliate1 {
+      content: url('https://web.archive.org/web/20090901201725/http://www.geocities.com/legofreak152003/affiliate.gif');
+  }
+  .nerdy #affiliate2 {
+      content: url('https://web.archive.org/web/20091027052649/http://www.geocities.com/felixadept/Affiliate/FFEmini4.gif');
+  }
+  .nerdy #affiliate3 {
+      content: url('https://web.archive.org/web/20090729091254/http://www.geocities.com/smeegle_puff27/Site_Affiliate.gif');
+  }
+      
+  /* silly styles */
+      
+  .silly {
+      font-family: Jokerman, "Comic Sans MS", "Comic Sans";
+      font-size: 1.4em;
+      text-align: center;
+      color: black;
+  }
+  .silly h1 {
+      font-size: 2em;
+      animation: blinker 0.5s linear infinite;
+      font-family: Jokerman, "Comic Sans MS", "Comic Sans";
+  }
+   @keyframes blinker {
+   50% {
+  opacity: 0;
+  }
+  }
+  .silly a {
+      color: blueviolet;
+      margin: 0 10px 0 20px;
+  }
+  .silly a:hover {
+      background-color: darkgoldenrod;
+      cursor: url(https://web.archive.org/web/20090731114836/http://hk.geocities.com/godofcat/mcmug/cursor1p2.gif), auto;
+  }
+  .silly a:before {
+      content: url('https://web.archive.org/web/20091019163523/http://www.geocities.com/sillyerik/checkit.gif');
+      margin-right: 10px;
+  }
+  .silly div[id^='img'] {
+      margin-right: 10px;
+      width: 200px;
+      display: inline-block;
+  }
+  .silly #img1 {
+      content: url('https://web.archive.org/web/20090728112415/http://uk.geocities.com/swinton_palais/gifs/dancer001.gif');
+  }
+  .silly #img2 {
+      content: url('https://web.archive.org/web/20090728052455/http://es.geocities.com/cursetaragones/Dancer-01.gif');
+  }
+  .silly #img3 {
+      content: url('https://web.archive.org/web/20091027162247/http://www.geocities.com/ray_spiderman_land/images/spider_ani006.gif');
+  }
+  .silly div[id^='affiliate'] {
+      width: 100px;
+      margin-right: -10px;
+      display: inline-block;
+  }
+  .silly #affiliate1 {
+      content: url('https://web.archive.org/web/20091020023540/http://geocities.com/CapitolHill/Lobby/7287/dance.gif');
+  }
+  .silly #affiliate2 {
+      content: url('https://web.archive.org/web/20091027081958/http://geocities.com/hondacbr929net/1guerillapumping_8363_number_counter.gif');
+  }
+  .silly #affiliate3 {
+      content: url('https://web.archive.org/web/20091020141955/http://geocities.com/Hollywood/Park/3469/counter8.gif');
+  }
+  
+  /* cool styles */
+      
+  .cool {
+      font-family: 'Bangers', "Comic Sans MS", "Comic Sans";
+      font-size: 1.4em;
+      text-align: center;
+      color: orange;
+  }
+  .cool h1 {
+      font-size: 2em;
+      animation: blinker 0.5s linear infinite;
+      font-family: 'Bangers', "Comic Sans MS", "Comic Sans";
+  }
+   @keyframes blinker {
+   50% {
+  opacity: 0;
+  }
+  }
+  .cool a {
+      color: lightslategrey;
+      margin: 0 10px 0 20px;
+  }
+  .cool a:hover {
+      background-color: darkslategray;
+      cursor: url(https://web.archive.org/web/20091026232535/http://www.geocities.com/john_miles_the_cucumber/arnoldcursorpreview.gif), auto;
+  }
+  .cool a:before {
+      content: url('https://web.archive.org/web/20091027043933/http://us.geocities.com/sakyaputto/cursor.gif');
+      margin-right: 10px;
+  }
+  .cool div[id^='img'] {
+      margin-right: 10px;
+      width: 200px;
+      display: inline-block;
+  }
+  .cool #img1 {
+      content: url('https://web.archive.org/web/20091027044645/http://www.geocities.com/p13_99/simpson/BARTSKATE.GIF');
+  }
+  .cool #img2 {
+      content: url('https://web.archive.org/web/20091027140600/http://www.geocities.com/cristolouw/coolpics/dragon001.gif');
+  }
+  .cool #img3 {
+      content: url('https://web.archive.org/web/20090904032715/http://geocities.com/sophianasa/smiles/bigsunglassessmile.gif');
+  }
+  .cool div[id^='affiliate'] {
+      width: 100px;
+      margin-right: -10px;
+      display: inline-block;
+      border: red solid;
+  }
+  .cool #affiliate1 {
+      content: url('https://web.archive.org/web/20091019080545/http://www.geocities.com/federicobryner/coolllinks.gif');
+  }
+  .cool #affiliate2 {
+      content: url('https://web.archive.org/web/20091027014444/http://www.geocities.com/life_of_boredom/affiliate_delayed.gif');
+  }
+  .cool #affiliate3 {
+      content: url('https://web.archive.org/web/20091020062901/http://www.geocities.com/sayian_rivals/affiliate.gif');
+  }
