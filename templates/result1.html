@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+
+{% block base %}
+
+
+
+
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/css/style3.css">
+    </head>
+<div id="quiz">
+    <h1> Mental Health Checker</h1>
+    <div id="questions">
+        {{ prediction }}
+    </div>
+    <ul id="answers">
+    </ul>
+    <div style="clear: both"></div>
+    <form action="service">
+    <button id="button" class="button">Retry</button>
+    </form>
+  </div>
+  <div id="error">
+    <p>There was an error. Please try again</p>
+  </div>
+  </html>
+  {% endblock base %}

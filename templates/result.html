@@ -1,5 +1,17 @@
+{% extends 'base.html' %}
+
+
+
+{% block base %}
+
+
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/css/style1.css">
+    </head>
 <body>
-    <div id="login-form-container">
+    <div id="adiprag wrapper"> <!--login-form-container --> 
         <div class="card" style="width: 400px">
             <div class="card-content">
                 <div class="media">
@@ -7,7 +19,7 @@
                         {{ prediction }}
                     </div>
                 </div>
-                <form action="home">
+                <form action="service">
                     <div class="field">
                         <button class="button is-fullwidth is-rounded is-success">Retry</button>
                     </div>
@@ -16,3 +28,5 @@
         </div>
     </div>
 </body>
+</html>
+{% endblock base %}

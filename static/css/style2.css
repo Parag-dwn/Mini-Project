@@ -1,0 +1,23 @@
+.adiprag {
+    width: 100%;
+    min-width: 450px;
+    height: 100%;
+    padding-block: 54px;
+    text-align: center;
+    background: #ffffff;
+    font-family: "Ubuntu", sans-serif;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .wrapper {
+    max-width: 800px;
+    min-width: 420px;
+    height: 100%;
+    background: #e8e8e8;
+    margin: auto;
+    border-radius: 5px;
+    padding-bottom: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
