@@ -86,7 +86,7 @@ def ValuePredictor(to_predict_list):
     result = loaded_model.predict(to_predict)
     return result[0]
 
-@app.route('/result', methods = ['POST'])
+@app.route('/result1', methods = ['POST'])
 
 def result():
     if request.method =='POST':
@@ -112,7 +112,7 @@ def result():
             prediction ='Prediction shows that you are  mentaly Ill'
         else:
             prediction ='Prediction shows that your are fine'           
-        return render_template("result.html", prediction = prediction)
+        return render_template("result1.html", prediction = prediction)
     else:
         return render_template("home.html")
         
